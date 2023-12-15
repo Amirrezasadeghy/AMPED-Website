@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+    <title>AMPED - Contact Us</title>
+
+    <link href="./styles/contact.css" rel="stylesheet">
+    <link href="./styles/bg-video/jquery.background-video.css" rel="stylesheet">
+
+</head>
+<body class="text-light">
+
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-expand-md bg-dark navbar-dark">
+    <div class="container">
+        <!-- <a class="navbar-brand" href="./Homepage.html">AMPED</a> -->
+        <img src="./assets/3.svg" alt="amped logo" class="navbar-brand">
+        <button class="navbar-toggler" data-bs-target="#navmenu" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="menu-item">
+                    <a class="nav-link" href="./Homepage.html">HOME</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="#subscriptions">SUBSCRIPTIONS</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="./Download.html">DOWNLOAD</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-secondary" onclick="window.location.href='./contact.html'">
+                CONTACT US
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner Section -->
+<section class="text-light p-3 text-center custom-banner">
+    <div class="container">
+        <div class="d-sm-flex align-items-center m-3">
+            <div class="mb-4">
+                <h1 class="text-sm-start">Amped is Your passport to a universe of extraordinary musical moments</h1>
+            </div>
+            <img alt="To be replaced" class="img-fluid" src="./assets/QA.png">
+        </div>
+    </div>
+</section>
+
+<!-- Body Section  -->
+<h3 class="text-center m-sm-5 mg-md-5 m-lg-5">Contact Form</h3>
+<div class="container">
+    <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input id="fname" name="firstname" placeholder="Your name.." type="text">
+
+        <label for="lname">Last Name</label>
+        <input id="lname" name="lastname" placeholder="Your last name.." type="text">
+
+        <label for="lname">Your email</label>
+        <input id="lname" name="email" placeholder="Your email.." type="text">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<section class="footer container-fluid d-flex flex-column align-items-center">
+    <!-- <p class="text-center fs-4 fw-bolder my-4">AMPED</p> -->
+    <img src="./assets/3.svg" alt="amped logo" class="navbar-brand">
+    <p class="text-center fs-5 my-4">Amped, where music meets magic</p>
+    <div class="footer-links d-flex justify-content-between">
+        <a class="nav-link active" aria-current="page" href="./Homepage.html">HOME</a>
+        <a class="nav-link active" aria-current="page" href="#subscriptions">SUBSCRIPTIONS</a>
+        <a class="nav-link active" aria-current="page" href="./Download.html">DOWNLOAD</a>
+    </div>
+</section>
+
+<div class="bg-animation">
+    <div class="circle" id="blur"></div>
+    <div class="circle2" id="blur2"></div>
+</div>
+
+
+<!-- Adding Bootstrap JS Bundle -->
+<script crossorigin="anonymous"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Adding GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+
+<!-- Adding jQuery  -->
+<script crossorigin="anonymous"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+<!-- Adding jQuery Background Video-->
+<script src="./scripts/bg-video/jquery.background-video.js"></script>
+
+<!-- Adding Parallax Plugin -->
+<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+
+<script>
+    // Adding Gradient Scroll Effect
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set('#blur', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur'
+    });
+
+    gsap.set('#blur2', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur2', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur2'
+    });
+
+    gsap.set('#blur3', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur3', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur3'
+    });
+
+    gsap.set('#blur4', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur4', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur4'
+    });
+</script>
+
+<!-- Adding JS -->
+<script src="./scripts/app.js"></script>
+</body>
+</html>

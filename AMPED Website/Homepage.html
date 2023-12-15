@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- for stylizing I used bootstrap css library, so I add bootstrap CDN here in the head which essentially means that I linked my website to a library of codes provided by someone else to stylize my website -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+    <!-- Sets the title of the webpage to "AMPED - A Universe of Musical Moments". -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <title>AMPED - A Universe of Musical Moments</title>
+
+    <!-- Links the custom CSS file "homePage.css" to style the elements on the home page. -->
+    <link href="./styles/homePage.css" rel="stylesheet">
+
+    <!-- Links the CSS file "jquery.background-video.css" to style the background video component 
+     using the jQuery library. -->
+    <link href="./styles/bg-video/jquery.background-video.css" rel="stylesheet">
+
+    <!-- Includes the Flickity CSS file from a CDN, which is a responsive touch carousel library
+     for creating image galleries and sliders. -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body class="text-light">
+
+<!-- Nav Bar -->
+<!-- This code defines the navigation bar for the website. It uses Bootstrap's navbar component 
+for a responsive and collapsible navigation menu. 
+-->
+<nav class="navbar navbar-expand-lg navbar-expand-md bg-dark navbar-dark">
+    <div class="container-md">
+        <!-- <a class="navbar-brand" href="./Homepage.html">AMPED</a> -->
+        <img src="./assets/3.svg" alt="amped logo" class="navbar-brand">
+        <button class="navbar-toggler" data-bs-target="#navmenu" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="menu-item">
+                    <a class="nav-link" href="./Homepage.html">HOME</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="#subscriptions">SUBSCRIPTIONS</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="./Download.html">DOWNLOAD</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-secondary" onclick="window.location.href='./contact.html'">
+                CONTACT US
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner Section -->
+<!--
+    This section defines the banner of the website, featuring a video background and overlay content.
+    It includes a headline, download button, and a button for learning more. The background video is 
+    embedded with autoplay, loop, and muted attributes for an engaging visual experience.
+-->
+<div class="video-background">
+    <section class="content-overlay">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="tlt text-sm-start">Amped is Your passport to a universe of extraordinary musical moments!</h1>
+                <button class="btn btn-light mt-3 mx-2" type="button" onclick="window.location.href='./Download.html'">
+                    DOWNLOAD
+                </button>
+                <button class="btn btn-outline-light mt-3 mx-2" type="button">LEARN MORE</button>
+            </div>
+        </div>
+    </section>
+    <div class="video-wrap">
+        <div id="video">
+            <video autoplay id="bgvid" loop muted playsinline>
+                <source src="./assets/Video R.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
+<!-- Body Section  -->
+<!--
+    This section defines the body content of the website, presenting information about "Amped" and
+    the advantages of going premium. It is organized into multiple containers, each containing a heading,
+    images, and related text. The content highlights Amped's features and benefits, such as downloadable music,
+    an ad-free experience, the ability to play songs in any order, and higher sound quality.
+-->
+<section class="body custom-css-body text-light">
+    <div class="container-md body-container-custom">
+        <h1 class="text-center mt-5 mb-2">What is Amped?</h1>
+        <div class="row">
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img alt="mobile" id="mobile" src="./assets/Mobile.png">
+            </div>
+            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center" id="frame1">
+                <p class="text text-container">
+                    Discover limitless beats at Amped. Unleash curated playlists, connect with fellow music enthusiasts,
+                    and elevate your audio experience. Your journey into a world of rhythm starts here.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-md body-container-custom">
+        <h1 class="text-center mt-5 mb-2">Why go Premium ?</h1>
+        <div class="row">
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img alt="mobile" id="headphone" src="./assets/Headphone.png">
+            </div>
+            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center" id="frame2">
+                <div class="text-container">
+                    <h1>Downloadable Music</h1>
+                    <p class="text">
+                        Amped lets you download your favorite tracks for offline listening, ensuring your music is
+                        always
+                        with you on the go.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-md body-container-custom">
+        <div class="row">
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img alt="mobile" id="like" src="./assets/Like.png">
+            </div>
+            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center" id="frame3">
+                <div class="text-container">
+                    <h1>Ad-Free Experience</h1>
+                    <p class="text">
+                        Enjoy uninterrupted music with Amped's ad-free experience, putting the focus entirely on your
+                        playlist.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-md body-container-custom">
+        <div class="row">
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img alt="mobile" id="music" src="./assets/Music.png">
+            </div>
+            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center" id="frame4">
+                <div class="text-container">
+                    <h1>Play Songs in Any Order</h1>
+                    <p class="text">
+                        Take control of your playlist – Amped lets you play songs in any order, giving you the freedom
+                        to
+                        set the vibe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-md body-container-custom">
+        <div class="row">
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img alt="mobile" id="speaker" src="./assets/Speaker.png">
+            </div>
+            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center" id="frame5">
+                <div class="text-container">
+                    <h1>Higher Sound Quality</h1>
+                    <p class="text">
+                        Elevate your audio experience with Amped's higher sound quality, delivering your favorite tunes
+                        with
+                        enhanced clarity and richness.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Subscriptions Section  -->
+<!--
+    This section presents different premium plans for users to choose from. It includes a heading 
+    "Pick Your Premium" followed by a carousel of cards, each one  representing a premium plan. Each card
+    displays details such as plan type, price, features, and a "Get Started" button.
+-->
+<h1 class="text-center my-5">Pick Your Premium</h1>
+<section class="statement container" id="join">
+        <div class="main-carousel">
+            <div class="carousel-cell">
+                <div class="card">
+                    <h3 class="card-header">Individual</h3>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span class="card-price">$10.99</span>
+                        <span class="card-currency">CAD</span>
+                    </div>
+                    <div class="card-divide"></div>
+                    <ul class="card-list">
+                        <li class="card-list-item">Ad-free music listening</li>
+                        <li class="card-list-item">Play anywhere - even offline</li>
+                        <li class="card-list-item">Play songs in any order</li>
+                    </ul>
+                    <button class="card-button btn" type="button">Get Started</button>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <h3 class="card-header">Family</h3>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span class="card-price">$16.99</span>
+                        <span class="card-currency">CAD</span>
+                    </div>
+                    <div class="card-divide"></div>
+                    <ul class="card-list">
+                        <li class="card-list-item">6 Premium accounts for family members</li>
+                        <li class="card-list-item">Block explicit music</li>
+                        <li class="card-list-item">Amped Kids: a separate app made just for kids</li>
+                    </ul>
+                    <button class="card-button btn" type="button">Get Started</button>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <h3 class="card-header">Student</h3>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span class="card-price">$5.99</span>
+                        <span class="card-currency">CAD</span>
+                    </div>
+                    <div class="card-divide"></div>
+                    <ul class="card-list">
+                        <li class="card-list-item">Special discount for eligible students in university</li>
+                        <li class="card-list-item">Ad-free music listening</li>
+                        <li class="card-list-item">Play anywhere - even offline</li>
+                    </ul>
+                    <button class="card-button btn" type="button">Get Started</button>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <h3 class="card-header">Seniors</h3>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span class="card-price">$4.99</span>
+                        <span class="card-currency">CAD</span>
+                    </div>
+                    <div class="card-divide"></div>
+                    <ul class="card-list">
+                        <li class="card-list-item">Special discount for eligible seniors in university</li>
+                        <li class="card-list-item">Ad-free music listening</li>
+                        <li class="card-list-item">Play anywhere - even offline</li>
+                    </ul>
+                    <button class="card-button btn" type="button">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section  -->
+    <section class="footer container-fluid d-flex flex-column align-items-center">
+        <!-- <p class="text-center fs-4 fw-bolder my-4">AMPED</p> -->
+        <img src="./assets/3.svg" alt="amped logo" class="navbar-brand">
+        <p class="text-center fs-5 my-4">Amped, where music meets magic</p>
+        <div class="footer-links d-flex justify-content-between">
+            <a class="nav-link active" aria-current="page" href="./Homepage.html">HOME</a>
+            <a class="nav-link active" aria-current="page" href="#subscriptions">SUBSCRIPTIONS</a>
+            <a class="nav-link active" aria-current="page" href="./Download.html">DOWNLOAD</a>
+        </div>
+    </section>
+
+<!--
+    This code defines a background animation using circles with blur effects. The circles are created
+    within a container with the class "bg-animation." Each circle is represented by a <div> element
+    with a specific class (circle, circle2, circle3, circle4) and a unique ID for styling animating purposes
+    (blur, blur2, blur3, blur4).
+-->
+<div class="bg-animation">
+    <div class="circle" id="blur"></div>
+    <div class="circle2" id="blur2"></div>
+    <div class="circle3" id="blur3"></div>
+    <div class="circle4" id="blur4"></div>
+</div>
+
+
+<!--
+    The following code includes various JavaScript libraries for enhancing the functionality and design
+    of the website. Each script tag references a specific external library or plugin, bringing in
+    Bootstrap JS Bundle, GSAP with ScrollTrigger, jQuery, jQuery Background Video,
+    Parallax Plugin, textilate, and Flickity.
+-->
+<!-- Adding Bootstrap JS Bundle -->
+<script crossorigin="anonymous"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Adding GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+
+<!-- Adding jQuery  -->
+<script crossorigin="anonymous"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+<!-- Adding jQuery Background Video-->
+<script src="./scripts/bg-video/jquery.background-video.js"></script>
+
+<!-- Adding Parallax Plugin -->
+<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+<!-- Adding textilate -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+
+<!-- Adding flickity -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+
+<!--
+    This script includes animations using GSAP (GreenSock Animation Platform) with ScrollTrigger.
+    It features gradient scroll effects for circles, scroll animations for images, and frame animations.
+-->
+<script>
+    // Adding Gradient Scroll 
+    // Adding Gradient Scroll Effect using GSAP and ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+
+    // Setting initial positions for the circles
+    gsap.set('#blur', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+
+    // Animating the first circle with a back easing effect on scroll
+    // Similar animations for other circles (blur2, blur3, blur4), images, and frames
+    gsap.to('#blur', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur'
+    });
+
+    gsap.set('#blur2', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur2', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur2'
+    });
+
+    gsap.set('#blur3', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur3', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur3'
+    });
+
+    gsap.set('#blur4', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur4', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur4'
+    });
+
+    // Adding Images Scroll Animation
+    gsap.set('#mobile', {
+        x: -700,
+        y: -700,
+        scale: 0.2
+    })
+    gsap.to('#mobile', {
+        x: 0,
+        y: 0,
+        scale: .75,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#mobile'
+    });
+
+    gsap.set('#headphone', {
+        x: -700,
+        y: -700,
+        scale: 0.2
+    })
+    gsap.to('#headphone', {
+        x: 0,
+        y: 0,
+        scale: .75,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#headphone'
+
+    });
+
+    gsap.set('#like', {
+        x: -700,
+        y: -700,
+        scale: 0.2
+    })
+    gsap.to('#like', {
+        x: 0,
+        y: 0,
+        scale: .75,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#like'
+    });
+
+    gsap.set('#music', {
+        x: -700,
+        y: -700,
+        scale: 0.2
+    })
+    gsap.to('#music', {
+        x: 0,
+        y: 0,
+        scale: .75,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#music'
+    });
+
+    gsap.set('#speaker', {
+        x: -700,
+        y: -700,
+        scale: 0.2
+    })
+    gsap.to('#speaker', {
+        x: 0,
+        y: 0,
+        scale: .75,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#speaker'
+    });
+
+    // Animating Frames
+    gsap.set('#frame1', {
+        x: 200,
+        y: 100,
+    })
+    gsap.to('#frame1', {
+        x: 0,
+        y: 0,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#frame1'
+
+    });
+
+    gsap.set('#frame2', {
+        x: 200,
+        y: 100,
+    })
+    gsap.to('#frame2', {
+        x: 0,
+        y: 0,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#frame2'
+    });
+
+    gsap.set('#frame3', {
+        x: 200,
+        y: 100,
+    })
+    gsap.to('#frame3', {
+        x: 0,
+        y: 0,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#frame3'
+    });
+
+    gsap.set('#frame4', {
+        x: 200,
+        y: 100,
+    })
+    gsap.to('#frame4', {
+        x: 0,
+        y: 0,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#frame4'
+    });
+
+    gsap.set('#frame5', {
+        x: 200,
+        y: 100,
+    })
+    gsap.to('#frame5', {
+        x: 0,
+        y: 0,
+        duration: 3,
+        ease: 'back',
+        scrollTrigger: '#frame5'
+    });
+</script>
+
+<!-- Adding JS -->
+<script src="./scripts/app.js"></script>
+</body>
+</html>

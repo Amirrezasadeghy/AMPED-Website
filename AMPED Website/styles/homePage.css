@@ -1,0 +1,226 @@
+/* Custom CSS Stylization */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Quicksand:wght@500&family=Roboto:wght@300&family=Work+Sans&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+    width: 150px;
+}
+
+body {
+    background-color: rgb(20, 22, 24);
+}
+
+.custom-btn-secondary {
+    background-color: rgb(0, 255, 229);
+    color: white;
+}
+
+.custom-btn-outline-secondary {
+    border-color: rgb(0, 255, 229);
+    color: rgb(0, 255, 229);
+}
+
+.custom-text-secondary {
+    color: rgb(0, 255, 229);
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+/* Custom CSS for styling */
+.video-background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.video-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    width: 100% !important;
+    height: 100%;
+}
+
+#bgvid {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+}
+
+.img-custom-css {
+    width: 200px;
+    height: 200px;
+}
+
+.text-container {
+    margin: 30px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.273);
+    border-radius: 30px;
+    border: 1px solid rgb(19, 184, 225);
+    backdrop-filter: blur(2px);
+    font-size: 25px;
+    text-align: justify-all;
+}
+
+.t1 {
+    font-size: 30px;
+}
+
+h1 {
+    font-weight: bolder;
+    color: rgb(195, 255, 235);
+}
+
+.bg-animation {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+
+.circle {
+    width: 300px;
+    height: 500px;
+    background-color: rgb(19, 98, 225);
+    border-radius: 100%;
+    filter: blur(100px);
+}
+
+.circle2 {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(225, 19, 81);
+    border-radius: 100%;
+    filter: blur(100px);
+}
+
+.circle3 {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(94, 19, 225);
+    border-radius: 100%;
+    filter: blur(100px);
+}
+
+.circle4 {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(19, 173, 225);
+    border-radius: 100%;
+    filter: blur(100px);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 750px;
+    padding: 30px;
+    color: #B1CCE5;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.313);
+    border: 1px solid rgb(19, 184, 225);
+    backdrop-filter: blur(5px);
+}
+.card-header{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+.card-price{
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 12px;
+}
+.card-currency{
+    font-size: 32px;
+    font-weight: 500;
+}
+.card-divide{
+    border: 1px solid #B1CCE5;
+    margin-top: 50px;
+    margin-bottom: 66px;
+}
+.card-list{
+    flex-grow: 1;
+}
+.card-list-item{
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.card-button{
+    border-radius: 70px;
+    background-color: #B1CCE5;
+    color: #0F1112;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.card-button:hover, .card-button:active{
+    background-color: #8c9aa8 !important;
+    color: #0F1112 !important;
+}
+
+/* Carousel */
+.carousel-cell {
+    width: calc(100% - 7.5px);
+    margin-right: 15px;
+}
+@media only screen and (min-width: 768px) {
+    .carousel-cell {
+        width: calc(50% - 7.5px);
+    }
+    .card{
+        min-height: 850px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .carousel-cell {
+        width: calc(33% - 7.5px);
+    }
+    .card{
+        min-height: 900px;
+    }
+}
+
+.dl-icon {
+    width: 300px;
+    cursor: pointer;
+}
+
+.footer{
+    margin-top: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #B1CCE5;
+    background-color: #0F1112;
+}
+.footer-links{
+    width: 100%;
+    max-width: 350px;
+}
+
